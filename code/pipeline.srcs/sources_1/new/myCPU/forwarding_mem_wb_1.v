@@ -13,7 +13,7 @@ module forwarding_mem_wb_1(
 );
 always@(*) begin
     if (mem_wb_reg_we && exe_mem_dmem_we) begin
-        if (exe_mem_rs2 == mem_wb_rd) forward_wd = 1;
+        if (exe_mem_rs2 == mem_wb_rd) forward_wd = 1; // 使用寄存器写入值
         else forward_wd = 0;
     end
     else forward_wd = 0;

@@ -10,21 +10,21 @@ module reg_exe_mem(
     input [`BIT_WIDTH] imm,RD1,RD2,
     input reg_src,reg_we,dmem_we,branch,dmem_read,
     // from exe
-    input [`BIT_WIDTH] alu_result, 
+    input [`BIT_WIDTH] alu_res, 
     // from branch_judge
     input jump,
 
     output[`BIT_WIDTH] exe_mem_inst, exe_mem_pc,
     output [`BIT_WIDTH] exe_mem_imm, exe_mem_RD1, exe_mem_RD2,
     output exe_mem_reg_src, exe_mem_reg_we, exe_mem_dmem_we, exe_mem_branch, exe_mem_dmem_read,
-    output [`BIT_WIDTH] exe_mem_alu_result, 
+    output [`BIT_WIDTH] exe_mem_alu_res, 
     output exe_mem_jump
 );
 
 reg [`BIT_WIDTH] inst_tmp, pc_tmp;
 reg  [`BIT_WIDTH] imm_tmp, RD1_tmp, RD2_tmp;
 reg  reg_src_tmp, reg_we_tmp, dmem_we_tmp, branch_tmp, dmem_read_tmp;
-reg  [`BIT_WIDTH] alu_result_tmp;
+reg  [`BIT_WIDTH] alu_res_tmp;
 reg  jump_tmp;
 
 always @(posedge clk or negedge rstn) begin
@@ -40,7 +40,7 @@ always @(posedge clk or negedge rstn) begin
         dmem_we_tmp <= 0;
         branch_tmp <= 0;
         dmem_read_tmp <= 0;
-        alu_result_tmp<= `ZERO_32;
+        alu_res_tmp<= `ZERO_32;
         jump_tmp  <= 0;
     end
     else 
@@ -55,7 +55,7 @@ always @(posedge clk or negedge rstn) begin
         dmem_we_tmp <= dmem_we;
         branch_tmp <= branch;
         dmem_read_tmp <= dmem_read;
-        alu_result_tmp<= alu_result;
+        alu_res_tmp<= alu_res;
         jump_tmp  <= jump;
     end
  
@@ -72,6 +72,6 @@ assign exe_mem_reg_we = reg_we_tmp;
 assign exe_mem_dmem_we = dmem_we_tmp;
 assign exe_mem_branch =branch_tmp;
 assign exe_mem_dmem_read =dmem_read_tmp;
-assign  exe_mem_alu_result =alu_result_tmp;
+assign  exe_mem_alu_res =alu_res_tmp;
 assign exe_mem_jump = jump_tmp;
 endmodule

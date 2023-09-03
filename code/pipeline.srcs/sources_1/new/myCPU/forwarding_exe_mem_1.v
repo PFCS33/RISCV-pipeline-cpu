@@ -29,15 +29,15 @@ always@(*) begin
         // in1
         if (exe_mem_reg_we && exe_mem_rd != 5'b0 && exe_mem_rd == id_exe_rs1) 
         begin 
-            forward_in1 = 2'b10;
+            forward_in1 = 2'b10;    // alu结果
         end
         else if (mem_wb_reg_we && mem_wb_rd != 5'b0 && mem_wb_rd == id_exe_rs1) 
             // mem_wb 的forward 优先级更低
         begin
-            forward_in1 = 2'b01;
+            forward_in1 = 2'b01; // 回写值
         end
         else 
-            forward_in1 = 2'b00;
+            forward_in1 = 2'b00;  //普通 rd值
         // in2
         if (exe_mem_reg_we && exe_mem_rd != 5'b0 && exe_mem_rd == id_exe_rs2) 
         begin
