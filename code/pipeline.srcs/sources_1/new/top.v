@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module single_cycle(
+module pipeline_cycle(
     input   wire    rstn,
     input   wire    clk,
 

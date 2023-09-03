@@ -8,8 +8,8 @@ module npc(
     input [6:0] exe_mem_opcode,   // 根据跳转的opcode判断 npc结果
 
     input [`BIT_WIDTH] exe_mem_pc, // 保存到exe_mem流水阶段的pc值
-    input [`BIT_WIDTH] imm, // imm值
     input [`BIT_WIDTH] exe_mem_alu_res,     // alu计算结果
+    input [`BIT_WIDTH] imm, // imm值
     output reg[`BIT_WIDTH] pc_new
 );
 

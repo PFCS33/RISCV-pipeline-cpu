@@ -43,6 +43,10 @@ always @(posedge clk or negedge rstn) begin
         end
 end
 
+// 连线作为output
+assign if_id_inst = inst_tmp;
+assign if_id_pc = pc_tmp;
+
 
 
 
