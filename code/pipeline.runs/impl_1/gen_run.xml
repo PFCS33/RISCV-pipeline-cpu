@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1693840035">
+  <File Type="BITSTR-BMM" Name="pipeline_cycle_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="pipeline_cycle_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="pipeline_cycle_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="pipeline_cycle_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="pipeline_cycle.tcl"/>
+  <File Type="OPT-TIMING" Name="pipeline_cycle_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="pipeline_cycle_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="pipeline_cycle_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="pipeline_cycle_reports.tcl"/>
+  <File Type="OPT-DRC" Name="pipeline_cycle_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="pipeline_cycle.hwdef"/>
+  <File Type="PWROPT-DCP" Name="pipeline_cycle_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="pipeline_cycle_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="pipeline_cycle_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="pipeline_cycle_placed.dcp"/>
+  <File Type="PLACE-IO" Name="pipeline_cycle_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="pipeline_cycle_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="pipeline_cycle_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="pipeline_cycle_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="pipeline_cycle_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="pipeline_cycle_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="pipeline_cycle_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="pipeline_cycle_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="pipeline_cycle_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="pipeline_cycle.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="pipeline_cycle_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="pipeline_cycle_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="pipeline_cycle_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="pipeline_cycle.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="pipeline_cycle_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="pipeline_cycle_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="pipeline_cycle_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="pipeline_cycle_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="pipeline_cycle_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="pipeline_cycle_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="pipeline_cycle_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="pipeline_cycle.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="pipeline_cycle_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pipeline_cycle_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pipeline_cycle_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="pipeline_cycle_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="pipeline_cycle_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="pipeline_cycle_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="pipeline_cycle_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="pipeline_cycle_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="pipeline_cycle_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="pipeline_cycle_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="pipeline_cycle_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="pipeline_cycle_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="pipeline_cycle_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="pipeline_cycle_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="pipeline_cycle_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="pipeline_cycle_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="pipeline_cycle_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="pipeline_cycle_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="pipeline_cycle_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="pipeline_cycle_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="pipeline_cycle_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="pipeline_cycle.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="pipeline_cycle_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="pipeline_cycle.rbt"/>
+  <File Type="BITSTR-NKY" Name="pipeline_cycle.nky"/>
+  <File Type="PDI-FILE" Name="pipeline_cycle.pdi"/>
+  <File Type="RCFI_FILE" Name="pipeline_cycle.rcfi"/>
+  <File Type="CFI_FILE" Name="pipeline_cycle.cfi"/>
+  <File Type="RNPI_FILE" Name="pipeline_cycle.rnpi"/>
+  <File Type="NPI_FILE" Name="pipeline_cycle.npi"/>
+  <File Type="RBD_FILE" Name="pipeline_cycle.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="pipeline_cycle.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="pipeline_cycle.sysdef"/>
+  <File Type="BG-BGN" Name="pipeline_cycle.bgn"/>
+  <File Type="BG-DRC" Name="pipeline_cycle.drc"/>
+  <File Type="RDI-RDI" Name="pipeline_cycle.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/macro.vh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/alu.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/branch_judge.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/confreg/confreg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/cpu.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/cu.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/forwarding_exe_mem_1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/forwarding_mem_wb_1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/forwarding_mem_wb_2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/imm_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/nop_detect.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/npc.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/pc.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/reg_exe_mem.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/reg_id_exe.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/reg_if_id.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/reg_mem_wb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/myCPU/rf.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/cpu_test.hex.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/led_test.hex.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/add.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/ral.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/ral2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/jal.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/led_test.hex.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/led_lui.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/led_mini_test.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/led_test2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/mem.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/text_final.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="pipeline_cycle"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/pipeline_cycle.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="data_ram"/>
+  <BlockFileSet Type="BlockSrcs" Name="inst_rom"/>
+</GenRun>

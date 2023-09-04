@@ -21,7 +21,7 @@ always @(*) begin
             res= in1 >>in2;
         `ALU_SRA:
             // 算术移动
-            res = $signed (in2) >>> in2;
+            res = $signed (in1) >>> in2;
         `ALU_SLT:
             begin
                 // 异号情况

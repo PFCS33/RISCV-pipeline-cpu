@@ -24,7 +24,7 @@ module rf(
 
 );
 
-reg [31:0] regFiles [0:31];     //寄存器堆
+reg [`BIT_WIDTH] regFiles [`BIT_WIDTH];     //寄存器堆
 
 integer i; // flush counter
 // 上升沿写数据

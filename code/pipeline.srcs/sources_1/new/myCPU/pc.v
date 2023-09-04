@@ -9,6 +9,10 @@ module pc(
     output reg [`BIT_WIDTH] pc //输出值，真正的取指地址
 );
 
+    initial 
+    begin
+        pc = `ZERO_32;
+    end
     always@(posedge clk or negedge rstn) begin
         // 复位信号，置0
         if (!rstn) begin

@@ -33,14 +33,14 @@ begin
                 else   
                     jump= 1;
             else    
-                jump = (in1<in2)? 1 : 0;
+                jump = (in1>=in2)? 1 : 0;
         `FUNC3_BLTU: jump = (in1 < in2) ? 1'b1 : 1'b0;
         `FUNC3_BGEU: jump = (in1 >= in2) ? 1'b1 : 1'b0;
         default: jump = 1'b0;
         endcase
     end
     else
-        jump=1;
+        jump=0;
     
 end
 

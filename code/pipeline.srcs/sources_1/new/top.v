@@ -48,29 +48,29 @@ mycpu mycpu0(
 
 
 /* -------------------------------------------------------------------------- */
-wire [31:0] ram_addr, ram_wdata, ram_rdata;
-assign ram_addr = data_ram_addr;
-assign ram_wdata = data_ram_wdata;
-assign ram_wen = data_ram_wen;
-assign data_ram_rdata = ram_rdata;
+// wire [31:0] ram_addr, ram_wdata, ram_rdata;
+// assign ram_addr = data_ram_addr;
+// assign ram_wdata = data_ram_wdata;
+// assign ram_wen = data_ram_wen;
+// assign data_ram_rdata = ram_rdata;
 
 /* -------------------------------------------------------------------------- */
-// wire[31:0] ram_addr, confreg_addr;
-// wire[31:0] ram_wdata, confreg_wdata;
-// wire[31:0] ram_rdata, confreg_rdata;
+wire[31:0] ram_addr, confreg_addr;
+wire[31:0] ram_wdata, confreg_wdata;
+wire[31:0] ram_rdata, confreg_rdata;
 
-// assign ram_addr = data_ram_addr;
-// assign confreg_addr = data_ram_addr;
+assign ram_addr = data_ram_addr;
+assign confreg_addr = data_ram_addr;
 
-// assign ram_wdata = data_ram_wdata;
-// assign confreg_wdata = data_ram_wdata;
+assign ram_wdata = data_ram_wdata;
+assign confreg_wdata = data_ram_wdata;
 
-// wire is_confreg_addr;
-// assign is_confreg_addr = data_ram_addr[31:16] == 16'hbfaf ? 1'b1 : 1'b0;
-// assign confreg_wen = data_ram_wen & is_confreg_addr;
-// assign ram_wen = data_ram_wen & !is_confreg_addr;
+wire is_confreg_addr;
+assign is_confreg_addr = data_ram_addr[31:16] == 16'hbfaf ? 1'b1 : 1'b0;
+assign confreg_wen = data_ram_wen & is_confreg_addr;
+assign ram_wen = data_ram_wen & !is_confreg_addr;
 
-// assign data_ram_rdata = is_confreg_addr == 1'b1 ? confreg_rdata : ram_rdata;
+assign data_ram_rdata = is_confreg_addr == 1'b1 ? confreg_rdata : ram_rdata;
 
 
 /*ram & rom -------------------------------------------------------------------------- */

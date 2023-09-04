@@ -13,19 +13,17 @@ module mycpu(
     input  [31:0] dmem_rdata,
     output        dmem_wen,
     output [31:0] dmem_addr,
-    output [31:0] dmem_wdata,
-    
-    // debug
+    output [31:0] dmem_wdata
+    // // debug
 
-
-    output [`BIT_WIDTH] debug_pc_now,
-    output [`BIT_WIDTH] debug_inst,
-    output [`BIT_WIDTH] debug_imm,
-    output [`BIT_WIDTH] debug_RD1,
-    output [`BIT_WIDTH] debug_RD2,
-    output [`BIT_WIDTH] debug_alu_res,
-    output [`BIT_WIDTH] debug_in1,
-    output [`BIT_WIDTH] debug_in2
+    // output [`BIT_WIDTH] debug_pc_now,
+    // output [`BIT_WIDTH] debug_inst,
+    // output [`BIT_WIDTH] debug_imm,
+    // output [`BIT_WIDTH] debug_RD1,
+    // output [`BIT_WIDTH] debug_RD2,
+    // output [`BIT_WIDTH] debug_alu_res,
+    // output [`BIT_WIDTH] debug_in1,
+    // output [`BIT_WIDTH] debug_in2
  );
 
 
@@ -277,15 +275,15 @@ nop_detect u_nop_detect(
 
 
 /* -------------------------------------------------------------------------- */
-//debug
-assign debug_pc_now= pc;
-assign debug_imm=imm;
-assign debug_inst = inst;
-assign debug_RD1=RD1;
-assign debug_RD2= RD2;
-assign debug_alu_res = alu_res;
-assign debug_in1 = in1;
-assign debug_in2 = in2;
+// //debug
+// assign debug_pc_now= pc;
+// assign debug_imm=imm;
+// assign debug_inst = inst;
+// assign debug_RD1=RD1;
+// assign debug_RD2= RD2;
+// assign debug_alu_res = alu_res;
+// assign debug_in1 = in1;
+// assign debug_in2 = in2;
 
 
 
