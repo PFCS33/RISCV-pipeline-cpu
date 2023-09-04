@@ -4,7 +4,7 @@
 module nop_detect(
     input clk,
     input id_exe_dmem_read,
-    input [4:0]  if_id_rs1, if_id_rs2, id_ex_rd,
+    input [4:0]  if_id_rs1, if_id_rs2, id_exe_rd,
     input [6:0] if_id_opcode, id_exe_opcode, exe_mem_opcode,
 
     // we: stall，停止取下条指令
@@ -15,7 +15,7 @@ module nop_detect(
 
 always@(negedge clk) begin
     // load_use hazard
-    if(if_id_opcode != `OPCODE_S && id_exe_dmem_read &&  (id_ex_rd == if_id_rs1 || id_ex_rd == if_id_rs1) )
+    if(if_id_opcode != `OPCODE_S && id_exe_dmem_read &&  (id_exe_rd == if_id_rs1 || id_exe_rd == if_id_rs1) )
     begin
         // 停顿store指令，情空 id_exe，在中间产生一个nop
         pc_we <= 0;

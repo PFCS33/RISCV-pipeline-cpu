@@ -10,7 +10,7 @@ module testbench();
 
     always #5 clk = ~clk;
 
-    single_cycle single_cycle0(
+    pipeline_cycle u_pipeline_cycle(
         .rstn(rstn),
         .clk(clk)
     );

@@ -252,7 +252,7 @@ mux2 u_wd_mux2(
 nop_detect u_nop_detect(
     .clk(clk),
     .id_exe_dmem_read(id_exe_dmem_read),
-    .if_id_rs1(if_id_rs1), .if_id_rs2(if_id_rs2), .id_exe_rd(id_exe_rd),
+    .if_id_rs1(if_id_rs1), .if_id_rs2(if_id_rs2), .id_exe_rd(id_exe_inst[11:7]),
     .if_id_opcode(if_id_inst[6:0]), .id_exe_opcode(id_exe_inst[6:0]), .exe_mem_opcode(exe_mem_inst[6:0]),
     .pc_we(pc_we), .if_id_we(if_id_we),
     .if_id_empty(if_id_empty), .id_exe_empty(id_exe_empty)

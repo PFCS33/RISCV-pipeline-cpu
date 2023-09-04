@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../pipeline.srcs/sources_1/new/myCPU" \
+"../../../../pipeline.srcs/sources_1/new/ip/data_ram/sim/data_ram.v" \
+"../../../../pipeline.srcs/sources_1/new/ip/inst_rom/sim/inst_rom.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/alu.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/branch_judge.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/cpu.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/cu.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/forwarding_exe_mem_1.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/forwarding_mem_wb_1.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/forwarding_mem_wb_2.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/imm_gen.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/mux.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/nop_detect.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/npc.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/pc.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/reg_exe_mem.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/reg_id_exe.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/reg_if_id.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/reg_mem_wb.v" \
+"../../../../pipeline.srcs/sources_1/new/myCPU/rf.v" \
+"../../../../pipeline.srcs/sources_1/new/top.v" \
+"../../../../pipeline.srcs/sim_1/new/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
