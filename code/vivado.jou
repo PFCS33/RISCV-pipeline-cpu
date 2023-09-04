@@ -2,10 +2,10 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Sep  4 11:29:33 2023
-# Process ID: 21272
+# Start of session at: Mon Sep  4 11:39:17 2023
+# Process ID: 22552
 # Current directory: C:/Users/11731/Desktop/miniTerm/myPipeline/code
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16180 C:\Users\11731\Desktop\miniTerm\myPipeline\code\pipeline.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14288 C:\Users\11731\Desktop\miniTerm\myPipeline\code\pipeline.xpr
 # Log file: C:/Users/11731/Desktop/miniTerm/myPipeline/code/vivado.log
 # Journal file: C:/Users/11731/Desktop/miniTerm/myPipeline/code\vivado.jou
 #-----------------------------------------------------------
@@ -13,8 +13,234 @@ start_gui
 open_project C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.xpr
 update_compile_order -fileset sources_1
 launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
 launch_simulation
-close_project
-open_project C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.xpr
-launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/debug_pc_now}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/debug_reg3}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/debug_reg2}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/debug_reg1}} 
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_inst}} 
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+set_property -dict [list CONFIG.coefficient_file {C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/add.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+reset_run inst_rom_synth_1
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_pc_now}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_reg2}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_reg1}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_reg3}} 
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_imm}} 
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_alu_res}} 
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_in1}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_in2}} 
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_RD1}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_RD2}} 
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+set_property -dict [list CONFIG.coefficient_file {c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/WAR.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+reset_run inst_rom_synth_1
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+set_property -dict [list CONFIG.coefficient_file {C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/WAR.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+reset_run inst_rom_synth_1
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+reset_run inst_rom_synth_1
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+set_property -dict [list CONFIG.coefficient_file {C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/ral.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+set_property -dict [list CONFIG.coefficient_file {C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/ral.coe}] [get_ips data_ram]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/data_ram/data_ram.xci]
+catch { config_ip_cache -export [get_ips -all data_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/data_ram/data_ram.xci] -no_script -sync -force -quiet
+reset_run data_ram_synth_1
+launch_runs -jobs 8 data_ram_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/data_ram/data_ram.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+set_property -dict [list CONFIG.coefficient_file {c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/ral2.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+reset_run inst_rom_synth_1
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+set_property -dict [list CONFIG.coefficient_file {c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/jal.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+reset_run inst_rom_synth_1
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl

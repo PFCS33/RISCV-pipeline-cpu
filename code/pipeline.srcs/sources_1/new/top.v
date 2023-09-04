@@ -1,21 +1,28 @@
 `timescale 1ns / 1ps
 
+
 module pipeline_cycle(
     input   wire    rstn,
-    input   wire    clk
+    input   wire    clk,
 
-    // /********* confreg *********/
-    // output  wire[6:0]   digital_num0,
-    // output  wire[6:0]   digital_num1,
-    // output  wire[7:0]   digital_cs,
-    // output  wire[7:0]   led,
-    // input   wire[7:0]   switch,
-    // input   wire        mid_btn_key,
-    // input   wire        left_btn_key,
-    // input   wire        right_btn_key,
-    // input   wire        up_btn_key,
-    // input   wire        down_btn_key
+    // debug
+    output [31:0] debug_reg1,
+    output [31:0] debug_reg2,
+    output [31:0] debug_reg3,
+    output [31:0] debug_pc_now,
+    output [31:0] debug_inst,
+    output [31:0] debug_imm,
+    output [31:0] debug_RD1,
+    output [31:0] debug_RD2,
+    output [31:0] debug_alu_res,
+    output [31:0] debug_in1,
+    output [31:0] debug_in2
+
+
+ 
     );
+
+
 
     wire[31:0]  inst_rom_addr;
     wire[31:0]  inst_rom_rdata;
@@ -23,6 +30,8 @@ module pipeline_cycle(
     wire[31:0]  data_ram_wdata;
     wire        data_ram_wen;
     wire[31:0]  data_ram_rdata;
+
+
 
     mycpu mycpu0(
         .rstn(rstn),                                  // input
@@ -34,7 +43,19 @@ module pipeline_cycle(
         .dmem_addr(data_ram_addr),              // output
         .dmem_wdata(data_ram_wdata),            // output
         .dmem_wen(data_ram_wen),                // output
-        .dmem_rdata(data_ram_rdata)             // input
+        .dmem_rdata(data_ram_rdata),             // input
+
+        .debug_reg1(debug_reg1),
+        .debug_reg2(debug_reg2),
+        .debug_reg3(debug_reg3),
+        .debug_pc_now(debug_pc_now),
+        .debug_inst(debug_inst),
+        .debug_imm(debug_imm),
+        .debug_RD1(debug_RD1),
+        .debug_RD2(debug_RD2),
+        .debug_alu_res(debug_alu_res),
+        .debug_in1(debug_in1),
+        .debug_in2(debug_in2)
     );
 
     inst_rom inst_rom_4k(
@@ -60,5 +81,10 @@ module pipeline_cycle(
         .we(ram_wen),                               // input wire we
         .spo(ram_rdata)                             // output wire [31 : 0] spo
     );
+
+
+    // // debug
+    // assign debug_inst=inst_rom_rdata;
+
 
 endmodule

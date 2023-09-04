@@ -13,8 +13,23 @@ module mycpu(
     input  [31:0] dmem_rdata,
     output        dmem_wen,
     output [31:0] dmem_addr,
-    output [31:0] dmem_wdata
-);
+    output [31:0] dmem_wdata,
+    
+    // debug
+    output [`BIT_WIDTH] debug_reg1,
+    output [`BIT_WIDTH] debug_reg2,
+    output [`BIT_WIDTH] debug_reg3,
+    output [`BIT_WIDTH] debug_pc_now,
+    output [`BIT_WIDTH] debug_inst,
+    output [`BIT_WIDTH] debug_imm,
+    output [`BIT_WIDTH] debug_RD1,
+    output [`BIT_WIDTH] debug_RD2,
+    output [`BIT_WIDTH] debug_alu_res,
+    output [`BIT_WIDTH] debug_in1,
+    output [`BIT_WIDTH] debug_in2
+ );
+
+
 
 /* wires of pipeline register-------------------------------------------------------------------------- */
 // reg if_id 
@@ -101,7 +116,10 @@ rf u_rf(
     .we(mem_wb_reg_we),
     .RA1(if_id_inst[19:15]), .RA2(if_id_inst[24:20]), 
     .WA(mem_wb_inst[11:7]), .WD(WD), 
-    .RD1(RD1_tmp), .RD2(RD2_tmp)
+    .RD1(RD1_tmp), .RD2(RD2_tmp),
+
+    // debug
+    .debug_reg1(debug_reg1), .debug_reg2(debug_reg2), .debug_reg3(debug_reg3)
 );
 
 //get forward control of rd1 & rd2
@@ -115,12 +133,12 @@ forwarding_mem_wb_2 u_forwarding_mem_wb_2(
 );
 // get "real" rd1 & rd2
 mux2 u_rd1_mux2(
-    .op1(RD1), .op2(WD), 
+    .op1(RD1_tmp), .op2(WD), 
     .ctr(forward_rd1),
     .res(RD1)
 );
 mux2 u_rd2_mux2(
-    .op1(RD2), .op2(WD),
+    .op1(RD2_tmp), .op2(WD),
     .ctr(forward_rd2),
     .res(RD2)
 );
@@ -213,7 +231,7 @@ forwarding_mem_wb_1 u_forwarding_mem_wb_1(
     .forward_wd(forward_wd)
 );
 // get "real" dmem wd
-wire dmem_WD;
+wire [`BIT_WIDTH] dmem_WD;
 mux2 u_dmem_wd_mux2(
     .op1(exe_mem_RD2), .op2(WD),
     .ctr(forward_wd),
@@ -252,7 +270,7 @@ mux2 u_wd_mux2(
 nop_detect u_nop_detect(
     .clk(clk),
     .id_exe_dmem_read(id_exe_dmem_read),
-    .if_id_rs1(if_id_rs1), .if_id_rs2(if_id_rs2), .id_exe_rd(id_exe_inst[11:7]),
+    .if_id_rs1(if_id_inst[19:15]), .if_id_rs2(if_id_inst[24:20]), .id_exe_rd(id_exe_inst[11:7]),
     .if_id_opcode(if_id_inst[6:0]), .id_exe_opcode(id_exe_inst[6:0]), .exe_mem_opcode(exe_mem_inst[6:0]),
     .pc_we(pc_we), .if_id_we(if_id_we),
     .if_id_empty(if_id_empty), .id_exe_empty(id_exe_empty)
@@ -260,11 +278,16 @@ nop_detect u_nop_detect(
  
 
 
-
-
-
-
-
+/* -------------------------------------------------------------------------- */
+//debug
+assign debug_pc_now= pc;
+assign debug_imm=imm;
+assign debug_inst = id_exe_inst;
+assign debug_RD1=RD1;
+assign debug_RD2= RD2;
+assign debug_alu_res = alu_res;
+assign debug_in1 = in1;
+assign debug_in2 = in2;
 
 
 

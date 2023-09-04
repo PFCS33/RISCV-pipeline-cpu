@@ -11,12 +11,17 @@ module rf(
     input [`BIT_WIDTH] WD,    //写数据
 
     output [`BIT_WIDTH] RD1,  //读出的数据1
-    output [`BIT_WIDTH] RD2  //读出的数据2
+    output [`BIT_WIDTH] RD2,  //读出的数据2
+
+    // debug
+    output [`BIT_WIDTH] debug_reg1,
+    output [`BIT_WIDTH] debug_reg2,
+    output [`BIT_WIDTH] debug_reg3
 );
 
 reg [31:0] regFiles [0:31];     //寄存器堆
 
-reg [4:0] i; // flush counter
+integer i; // flush counter
 // 上升沿写数据
 always@(posedge clk or negedge rstn) 
 begin
@@ -38,5 +43,10 @@ end
 // 读寄存器数据 (0号寄存器返回0)
 assign RD1=(RA1==0)? `ZERO_32: regFiles[RA1];
 assign RD2=(RA2==0)? `ZERO_32: regFiles[RA2];
+
+assign debug_reg1=regFiles[5];
+assign debug_reg2=regFiles[6];
+assign debug_reg3=regFiles[7];
+
 
 endmodule

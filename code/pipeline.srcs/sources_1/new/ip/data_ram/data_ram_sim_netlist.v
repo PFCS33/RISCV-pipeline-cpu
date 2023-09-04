@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri May 12 17:33:33 2023
-// Host        : CHKB-LAPTOP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top data_ram -prefix
-//               data_ram_ data_ram_sim_netlist.v
+// Date        : Mon Sep  4 15:09:50 2023
+// Host        : DESKTOP-MPMJC1F running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/data_ram/data_ram_sim_netlist.v
 // Design      : data_ram
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -59,11 +59,11 @@ module data_ram
   (* c_has_qspo_rst = "0" *) 
   (* c_has_qspo_srst = "0" *) 
   (* c_has_spo = "1" *) 
-  (* c_mem_init_file = "no_coe_file_loaded" *) 
+  (* c_mem_init_file = "data_ram.mif" *) 
   (* c_parser_type = "1" *) 
   (* c_pipeline_stages = "0" *) 
   (* c_qualify_we = "0" *) 
-  (* c_read_mif = "0" *) 
+  (* c_read_mif = "1" *) 
   (* c_reg_a_d_inputs = "0" *) 
   (* c_sync_enable = "1" *) 
   (* c_width = "32" *) 
@@ -94,10 +94,10 @@ endmodule
 (* C_HAS_QDPO_CLK = "0" *) (* C_HAS_QDPO_RST = "0" *) (* C_HAS_QDPO_SRST = "0" *) 
 (* C_HAS_QSPO = "0" *) (* C_HAS_QSPO_CE = "0" *) (* C_HAS_QSPO_RST = "0" *) 
 (* C_HAS_QSPO_SRST = "0" *) (* C_HAS_SPO = "1" *) (* C_HAS_WE = "1" *) 
-(* C_MEM_INIT_FILE = "no_coe_file_loaded" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
+(* C_MEM_INIT_FILE = "data_ram.mif" *) (* C_MEM_TYPE = "1" *) (* C_PARSER_TYPE = "1" *) 
 (* C_PIPELINE_STAGES = "0" *) (* C_QCE_JOINED = "0" *) (* C_QUALIFY_WE = "0" *) 
-(* C_READ_MIF = "0" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
-(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) 
+(* C_READ_MIF = "1" *) (* C_REG_A_D_INPUTS = "0" *) (* C_REG_DPRA_INPUT = "0" *) 
+(* C_SYNC_ENABLE = "1" *) (* C_WIDTH = "32" *) (* ORIG_REF_NAME = "dist_mem_gen_v8_0_13" *) 
 module data_ram_dist_mem_gen_v8_0_13
    (a,
     d,
@@ -247,6 +247,7 @@ module data_ram_dist_mem_gen_v8_0_13
         .we(we));
 endmodule
 
+(* ORIG_REF_NAME = "dist_mem_gen_v8_0_13_synth" *) 
 module data_ram_dist_mem_gen_v8_0_13_synth
    (spo,
     clk,
@@ -273,6 +274,7 @@ module data_ram_dist_mem_gen_v8_0_13_synth
         .we(we));
 endmodule
 
+(* ORIG_REF_NAME = "spram" *) 
 module data_ram_spram
    (spo,
     clk,
@@ -753,7 +755,7 @@ module data_ram_spram
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "0" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000003)) 
     ram_reg_0_255_0_0
        (.A(a[7:0]),
         .D(d[0]),
@@ -824,7 +826,7 @@ module data_ram_spram
   (* ram_slice_begin = "13" *) 
   (* ram_slice_end = "13" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000001)) 
     ram_reg_0_255_13_13
        (.A(a[7:0]),
         .D(d[13]),
@@ -856,7 +858,7 @@ module data_ram_spram
   (* ram_slice_begin = "15" *) 
   (* ram_slice_end = "15" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000002)) 
     ram_reg_0_255_15_15
        (.A(a[7:0]),
         .D(d[15]),
@@ -888,7 +890,7 @@ module data_ram_spram
   (* ram_slice_begin = "17" *) 
   (* ram_slice_end = "17" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000002)) 
     ram_reg_0_255_17_17
        (.A(a[7:0]),
         .D(d[17]),
@@ -936,7 +938,7 @@ module data_ram_spram
   (* ram_slice_begin = "1" *) 
   (* ram_slice_end = "1" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000003)) 
     ram_reg_0_255_1_1
        (.A(a[7:0]),
         .D(d[1]),
@@ -952,7 +954,7 @@ module data_ram_spram
   (* ram_slice_begin = "20" *) 
   (* ram_slice_end = "20" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000002)) 
     ram_reg_0_255_20_20
        (.A(a[7:0]),
         .D(d[20]),
@@ -968,7 +970,7 @@ module data_ram_spram
   (* ram_slice_begin = "21" *) 
   (* ram_slice_end = "21" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000002)) 
     ram_reg_0_255_21_21
        (.A(a[7:0]),
         .D(d[21]),
@@ -1176,7 +1178,7 @@ module data_ram_spram
   (* ram_slice_begin = "4" *) 
   (* ram_slice_end = "4" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000002)) 
     ram_reg_0_255_4_4
        (.A(a[7:0]),
         .D(d[4]),
@@ -1224,7 +1226,7 @@ module data_ram_spram
   (* ram_slice_begin = "7" *) 
   (* ram_slice_end = "7" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000003)) 
     ram_reg_0_255_7_7
        (.A(a[7:0]),
         .D(d[7]),
@@ -1256,7 +1258,7 @@ module data_ram_spram
   (* ram_slice_begin = "9" *) 
   (* ram_slice_end = "9" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000000000003)) 
     ram_reg_0_255_9_9
        (.A(a[7:0]),
         .D(d[9]),

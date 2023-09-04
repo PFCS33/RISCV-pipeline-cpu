@@ -14,7 +14,9 @@ always@(*) begin
         if (inst[14:12] == `FUNC3_SLLI || inst[14:12] == `FUNC3_SRLI || inst[14:12] == `FUNC3_SRAI)
             imm = {{27{inst[24]}} ,inst[24:20]};
         else 
+        begin
             imm = {{20{inst[31]}} ,inst[31:20]};
+        end
     end
     // S
     else if (inst[6:0] == `OPCODE_S) 

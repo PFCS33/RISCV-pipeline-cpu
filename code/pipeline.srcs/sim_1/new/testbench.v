@@ -10,8 +10,10 @@ module testbench();
 
     always #5 clk = ~clk;
 
+
     pipeline_cycle u_pipeline_cycle(
         .rstn(rstn),
         .clk(clk)
+
     );
 endmodule
