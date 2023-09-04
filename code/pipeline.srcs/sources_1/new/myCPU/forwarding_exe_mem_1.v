@@ -20,7 +20,7 @@ module forward_exe_mem_1(
 
 always@(*) begin
         // UJ型，不进行forward
-    if (id_exe_opcode == `OPCODE_UJ) begin
+    if (id_exe_opcode == `OPCODE_UJ || id_exe_opcode ==`OPCODE_LUI) begin
         forward_in1 = 2'b00;
         forward_in2 = 2'b00;
     end

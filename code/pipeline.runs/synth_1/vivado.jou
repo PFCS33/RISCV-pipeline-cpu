@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Sep  4 16:20:05 2023
+# Process ID: 8036
+# Current directory: C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.runs/synth_1
+# Command line: vivado.exe -log pipeline_cycle.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipeline_cycle.tcl
+# Log file: C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.runs/synth_1/pipeline_cycle.vds
+# Journal file: C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source pipeline_cycle.tcl -notrace

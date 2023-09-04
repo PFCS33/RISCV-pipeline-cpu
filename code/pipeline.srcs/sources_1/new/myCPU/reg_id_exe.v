@@ -62,7 +62,10 @@ always@(posedge clk or negedge rstn) begin
         inst_tmp<=inst;
         pc_tmp <= pc;
         imm_tmp<=imm;
-        RD1_tmp<=RD1;
+        if(inst[6:0] ==`OPCODE_LUI)
+            RD1_tmp <= `ZERO_32;
+        else
+            RD1_tmp<=RD1;
         RD2_tmp<=RD2;
         id_exe_alu_src_tmp<=alu_src;
         id_exe_reg_src_tmp<=reg_src;

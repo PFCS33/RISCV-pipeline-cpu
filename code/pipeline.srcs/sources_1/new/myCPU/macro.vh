@@ -12,11 +12,12 @@
 `define OPCODE_I    7'b0010011
 `define OPCODE_S    7'b0100011
 `define OPCODE_B    7'b1100011
-`define OPCODE_UJ    7'b1101111
+`define OPCODE_UJ   7'b1101111
 
 // special opcode
 `define OPCODE_JALR 7'b1100111  
 `define OPCODE_LW   7'b0000011
+`define OPCODE_LUI  7'b0110111
 
 // funct3
 `define FUNC3_ADD      3'b000

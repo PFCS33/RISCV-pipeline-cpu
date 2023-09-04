@@ -244,3 +244,84 @@ close_sim
 launch_simulation
 open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
 source testbench.tcl
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property -dict [list CONFIG.coefficient_file {c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_test.hex.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+reset_run inst_rom_synth_1
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property -dict [list CONFIG.coefficient_file {C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/add.coe}] [get_ips data_ram]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/data_ram/data_ram.xci]
+catch { config_ip_cache -export [get_ips -all data_ram] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/data_ram/data_ram.xci] -no_script -sync -force -quiet
+reset_run data_ram_synth_1
+launch_runs -jobs 8 data_ram_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/data_ram/data_ram.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/constrs_1/new/single_cycle.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/constrs_1/new/single_cycle.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/WAR.coe] -no_script -reset -force -quiet
+remove_files  c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/WAR.coe
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+add_files -fileset constrs_1 -norecurse C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/constrs_1/new/pipeline_cycle.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.runs/impl_1/pipeline_cycle.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.runs/impl_1/pipeline_cycle.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+set_property -dict [list CONFIG.coefficient_file {c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_lui.coe}] [get_ips inst_rom]
+generate_target all [get_files  C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci]
+catch { config_ip_cache -export [get_ips -all inst_rom] }
+export_ip_user_files -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -no_script -sync -force -quiet
+reset_run inst_rom_synth_1
+launch_runs -jobs 8 inst_rom_synth_1
+export_simulation -of_objects [get_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/ip/inst_rom/inst_rom.xci] -directory C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files -ipstatic_source_dir C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/modelsim} {questa=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/questa} {riviera=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/riviera} {activehdl=C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg
+source testbench.tcl
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_reg1}} 
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/u_pipeline_cycle/debug_reg2}} 
+save_wave_config {C:/Users/11731/Desktop/miniTerm/myPipeline/code/testbench_behav.wcfg}
+close_sim

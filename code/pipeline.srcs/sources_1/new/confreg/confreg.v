@@ -255,7 +255,7 @@ endfunction
         if(rst == `RST_ENABLE) begin
             digital_num_v <= 32'b0;
         end else begin
-            if (write_digital_num) begin
+            if (write_led) begin
                 digital_num_v <= confreg_write_data;
             end
         end

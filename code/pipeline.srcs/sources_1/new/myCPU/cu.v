@@ -71,6 +71,16 @@ always @(*) begin
         dmem_read = 0;
         optype=`OP_TYPE_SL;
     end
+    else if(inst[6:0] == `OPCODE_LUI )
+    begin
+        alu_src=`ALU_SRC_IMM;
+        reg_src= `REG_SRC_ALU;
+        reg_we=1;   
+        dmem_we = 0;
+        branch = 0;
+        dmem_read = 0;
+        optype=`OP_TYPE_SL;
+    end
     else if ( inst[6:0]==`OPCODE_B)
     begin
         alu_src= `ALU_SRC_REG;
