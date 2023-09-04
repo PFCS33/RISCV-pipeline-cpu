@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Sep  4 11:29:33 2023
+# Process ID: 21272
+# Current directory: C:/Users/11731/Desktop/miniTerm/myPipeline/code
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16180 C:\Users\11731\Desktop\miniTerm\myPipeline\code\pipeline.xpr
+# Log file: C:/Users/11731/Desktop/miniTerm/myPipeline/code/vivado.log
+# Journal file: C:/Users/11731/Desktop/miniTerm/myPipeline/code\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Output Repository Path: Could not find the directory 'E:/ZZZ/lab3/single_cycle/single_cycle.cache/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado2021/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.sim/sim_1/behav/xsim/elaborate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.sim/sim_1/behav/xsim/elaborate.log"
+close_project
+open_project C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Output Repository Path: Could not find the directory 'E:/ZZZ/lab3/single_cycle/single_cycle.cache/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado2021/Vivado/2019.2/data/ip'.
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.sim/sim_1/behav/xsim/elaborate.log"
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep  4 11:33:42 2023...
