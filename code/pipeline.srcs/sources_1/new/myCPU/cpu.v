@@ -16,9 +16,8 @@ module mycpu(
     output [31:0] dmem_wdata,
     
     // debug
-    output [`BIT_WIDTH] debug_reg1,
-    output [`BIT_WIDTH] debug_reg2,
-    output [`BIT_WIDTH] debug_reg3,
+
+
     output [`BIT_WIDTH] debug_pc_now,
     output [`BIT_WIDTH] debug_inst,
     output [`BIT_WIDTH] debug_imm,
@@ -116,10 +115,9 @@ rf u_rf(
     .we(mem_wb_reg_we),
     .RA1(if_id_inst[19:15]), .RA2(if_id_inst[24:20]), 
     .WA(mem_wb_inst[11:7]), .WD(WD), 
-    .RD1(RD1_tmp), .RD2(RD2_tmp),
+    .RD1(RD1_tmp), .RD2(RD2_tmp)
 
-    // debug
-    .debug_reg1(debug_reg1), .debug_reg2(debug_reg2), .debug_reg3(debug_reg3)
+
 );
 
 //get forward control of rd1 & rd2
@@ -282,12 +280,13 @@ nop_detect u_nop_detect(
 //debug
 assign debug_pc_now= pc;
 assign debug_imm=imm;
-assign debug_inst = id_exe_inst;
+assign debug_inst = inst;
 assign debug_RD1=RD1;
 assign debug_RD2= RD2;
 assign debug_alu_res = alu_res;
 assign debug_in1 = in1;
 assign debug_in2 = in2;
+
 
 
 

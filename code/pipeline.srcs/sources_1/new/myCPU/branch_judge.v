@@ -13,7 +13,7 @@ always @(*)
 begin
     if(inst[6:0] == `OPCODE_B)
     begin
-        case(inst[6:0])
+        case(inst[14:12])
         `FUNC3_BEQ: jump = (in1 == in2) ? 1'b1 : 1'b0;
         `FUNC3_BNE: jump = (in1 == in2) ? 1'b0 : 1'b1;
         `FUNC3_BLT:

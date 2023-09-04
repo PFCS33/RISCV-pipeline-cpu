@@ -17,9 +17,7 @@ module pipeline_cycle(
     input   wire        up_btn_key,
     input   wire        down_btn_key
     
-    // output [31:0] debug_reg1,
-    // output [31:0] debug_reg2,
-    // output [31:0] debug_reg3
+
 );
 
 
@@ -43,31 +41,36 @@ mycpu mycpu0(
     .dmem_addr(data_ram_addr),              // output
     .dmem_wdata(data_ram_wdata),            // output
     .dmem_wen(data_ram_wen),                // output
-    .dmem_rdata(data_ram_rdata)             // input
+    .dmem_rdata(data_ram_rdata)            // input
 
-    // .debug_reg1(debug_reg1),
-    // .debug_reg2(debug_reg2),
-    // .debug_reg3(debug_reg3)
+
 );
 
 
-wire ram_wen, confreg_wen;
-wire[31:0] ram_addr, confreg_addr;
-wire[31:0] ram_wdata, confreg_wdata;
-wire[31:0] ram_rdata, confreg_rdata;
-
+/* -------------------------------------------------------------------------- */
+wire [31:0] ram_addr, ram_wdata, ram_rdata;
 assign ram_addr = data_ram_addr;
-assign confreg_addr = data_ram_addr;
-
 assign ram_wdata = data_ram_wdata;
-assign confreg_wdata = data_ram_wdata;
+assign ram_wen = data_ram_wen;
+assign data_ram_rdata = ram_rdata;
 
-wire is_confreg_addr;
-assign is_confreg_addr = data_ram_addr[31:16] == 16'hbfaf ? 1'b1 : 1'b0;
-assign confreg_wen = data_ram_wen & is_confreg_addr;
-assign ram_wen = data_ram_wen & !is_confreg_addr;
+/* -------------------------------------------------------------------------- */
+// wire[31:0] ram_addr, confreg_addr;
+// wire[31:0] ram_wdata, confreg_wdata;
+// wire[31:0] ram_rdata, confreg_rdata;
 
-assign data_ram_rdata = is_confreg_addr == 1'b1 ? confreg_rdata : ram_rdata;
+// assign ram_addr = data_ram_addr;
+// assign confreg_addr = data_ram_addr;
+
+// assign ram_wdata = data_ram_wdata;
+// assign confreg_wdata = data_ram_wdata;
+
+// wire is_confreg_addr;
+// assign is_confreg_addr = data_ram_addr[31:16] == 16'hbfaf ? 1'b1 : 1'b0;
+// assign confreg_wen = data_ram_wen & is_confreg_addr;
+// assign ram_wen = data_ram_wen & !is_confreg_addr;
+
+// assign data_ram_rdata = is_confreg_addr == 1'b1 ? confreg_rdata : ram_rdata;
 
 
 /*ram & rom -------------------------------------------------------------------------- */

@@ -16,7 +16,12 @@ module rf(
     // debug
     output [`BIT_WIDTH] debug_reg1,
     output [`BIT_WIDTH] debug_reg2,
-    output [`BIT_WIDTH] debug_reg3
+    output [`BIT_WIDTH] debug_reg3,
+    output [`BIT_WIDTH] debug_reg4,
+    output [`BIT_WIDTH] debug_reg5,
+    output [`BIT_WIDTH] debug_reg6,
+    output [`BIT_WIDTH] debug_reg7
+
 );
 
 reg [31:0] regFiles [0:31];     //寄存器堆
@@ -44,9 +49,12 @@ end
 assign RD1=(RA1==0)? `ZERO_32: regFiles[RA1];
 assign RD2=(RA2==0)? `ZERO_32: regFiles[RA2];
 
-assign debug_reg1=regFiles[5];
-assign debug_reg2=regFiles[6];
-assign debug_reg3=regFiles[7];
-
+assign debug_reg1=regFiles[5];  // t0
+assign debug_reg2=regFiles[6]; // t1
+assign debug_reg3=regFiles[7]; // t2
+assign debug_reg4=regFiles[28]; // t3
+assign debug_reg5=regFiles[29]; // t4
+assign debug_reg6=regFiles[30]; // t5
+assign debug_reg7=regFiles[31]; // t6
 
 endmodule

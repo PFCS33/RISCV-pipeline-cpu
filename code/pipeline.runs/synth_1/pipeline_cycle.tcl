@@ -17,9 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -35,11 +32,15 @@ set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/cpu_test.hex.coe
 add_files C:/Users/11731/Desktop/miniTerm/myPipeline/code/led_test.hex.coe
 add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/add.coe
-add_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/ral.coe
-add_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/ral2.coe
-add_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/jal.coe
-add_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_test.hex.coe
-add_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_lui.coe
+add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/ral.coe
+add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/ral2.coe
+add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/jal.coe
+add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_test.hex.coe
+add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_lui.coe
+add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_mini_test.coe
+add_files C:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/led_test2.coe
+add_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/mem.coe
+add_files c:/Users/11731/Desktop/miniTerm/myPipeline/func_test/hex/coe/text_final.coe
 read_verilog C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/myCPU/macro.vh
 read_verilog -library xil_defaultlib {
   C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/myCPU/alu.v

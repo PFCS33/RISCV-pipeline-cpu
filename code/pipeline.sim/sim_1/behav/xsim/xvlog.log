@@ -41,5 +41,10 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11731/Desktop/miniTerm/myP
 INFO: [VRFC 10-311] analyzing module rf
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeline_cycle
+INFO: [VRFC 10-2458] undeclared symbol ram_wen, assumed default net type wire [C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/top.v:54]
+INFO: [VRFC 10-2458] undeclared symbol confreg_wen, assumed default net type wire [C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/top.v:96]
+INFO: [VRFC 10-2458] undeclared symbol confreg_wdata, assumed default net type wire [C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/top.v:97]
+INFO: [VRFC 10-2458] undeclared symbol confreg_addr, assumed default net type wire [C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/top.v:98]
+INFO: [VRFC 10-2458] undeclared symbol confreg_rdata, assumed default net type wire [C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sources_1/new/top.v:99]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/11731/Desktop/miniTerm/myPipeline/code/pipeline.srcs/sim_1/new/testbench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench

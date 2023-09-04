@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1693815603">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1693838330">
   <File Type="PA-TCL" Name="pipeline_cycle.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="pipeline_cycle_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="pipeline_cycle_reports.tcl"/>
@@ -193,6 +193,30 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../func_test/hex/coe/led_lui.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/led_mini_test.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/led_test2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/mem.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../func_test/hex/coe/text_final.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
