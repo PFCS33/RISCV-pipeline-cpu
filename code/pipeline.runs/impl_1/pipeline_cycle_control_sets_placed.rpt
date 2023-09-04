@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Mon Sep  4 23:07:55 2023
+| Date         : Tue Sep  5 00:38:20 2023
 | Host         : DESKTOP-MPMJC1F running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file pipeline_cycle_control_sets_placed.rpt
 | Design       : pipeline_cycle
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               9 |            4 |
-| No           | No                    | Yes                    |             383 |          148 |
-| No           | Yes                   | No                     |             150 |           35 |
-| Yes          | No                    | No                     |              16 |            3 |
-| Yes          | No                    | Yes                    |            1100 |          627 |
-| Yes          | Yes                   | No                     |              37 |           16 |
+| No           | No                    | No                     |               9 |            5 |
+| No           | No                    | Yes                    |             383 |          160 |
+| No           | Yes                   | No                     |             150 |           40 |
+| Yes          | No                    | No                     |              16 |            6 |
+| Yes          | No                    | Yes                    |            1100 |          632 |
+| Yes          | Yes                   | No                     |              37 |           21 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,58 +73,58 @@ Table of Contents
 +----------------+-----------------------------------------------------------------------------------------------+-------------------------------+------------------+----------------+
 |  Clock Signal  |                                         Enable Signal                                         |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
 +----------------+-----------------------------------------------------------------------------------------------+-------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | confreg0/right_btn_key_sample                                                                 | mycpu0/u_rf/rstn              |                1 |              1 |
 |  clk_IBUF_BUFG | confreg0/up_btn_key_sample                                                                    | mycpu0/u_rf/rstn              |                1 |              1 |
 |  clk_IBUF_BUFG | confreg0/down_btn_key_sample                                                                  | mycpu0/u_rf/rstn              |                1 |              1 |
 |  clk_IBUF_BUFG | confreg0/left_btn_key_sample                                                                  | mycpu0/u_rf/rstn              |                1 |              1 |
 |  clk_IBUF_BUFG | confreg0/mid_btn_key_sample                                                                   | mycpu0/u_rf/rstn              |                1 |              1 |
-|  clk_IBUF_BUFG | confreg0/right_btn_key_sample                                                                 | mycpu0/u_rf/rstn              |                1 |              1 |
 | ~clk_IBUF_BUFG |                                                                                               |                               |                1 |              4 |
-|  clk_IBUF_BUFG |                                                                                               |                               |                3 |              5 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_exe_mem/alu_res_tmp_reg[0]_0[0]                                                  |                               |                3 |             16 |
+|  clk_IBUF_BUFG |                                                                                               |                               |                4 |              5 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_exe_mem/alu_res_tmp_reg[0]_0[0]                                                  |                               |                6 |             16 |
+|  clk_IBUF_BUFG |                                                                                               | confreg0/up_btn_key_count0    |                5 |             20 |
 |  clk_IBUF_BUFG |                                                                                               | confreg0/down_btn_key_count0  |                5 |             20 |
 |  clk_IBUF_BUFG |                                                                                               | confreg0/left_btn_key_count0  |                5 |             20 |
 |  clk_IBUF_BUFG |                                                                                               | confreg0/mid_btn_key_count0   |                5 |             20 |
 |  clk_IBUF_BUFG |                                                                                               | confreg0/right_btn_key_count0 |                5 |             20 |
-|  clk_IBUF_BUFG |                                                                                               | confreg0/up_btn_key_count0    |                5 |             20 |
-|  clk_IBUF_BUFG | mycpu0/u_nop_detect/E[0]                                                                      | mycpu0/u_rf/rstn              |               11 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/E[0]                                                                      | mycpu0/u_rf/rstn              |               22 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_14[0]                                                      | mycpu0/u_rf/rstn              |               20 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_16[0]                                                      | mycpu0/u_rf/rstn              |               18 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_13[0]                                                      | mycpu0/u_rf/rstn              |               17 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_19[0]                                                      | mycpu0/u_rf/rstn              |               19 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_2[0]                                                       | mycpu0/u_rf/rstn              |               22 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_20[0]                                                      | mycpu0/u_rf/rstn              |               19 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_23[0]                                                      | mycpu0/u_rf/rstn              |               19 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_24[0]                                                      | mycpu0/u_rf/rstn              |               16 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_29[0]                                                      | mycpu0/u_rf/rstn              |               20 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_28[0]                                                      | mycpu0/u_rf/rstn              |               21 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_1[0]                                                       | mycpu0/u_rf/rstn              |               20 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_3[0]                                                       | mycpu0/u_rf/rstn              |               22 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_4[0]                                                       | mycpu0/u_rf/rstn              |               25 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_11[0]                                                      | mycpu0/u_rf/rstn              |               14 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_18[0]                                                      | mycpu0/u_rf/rstn              |               21 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_22[0]                                                      | mycpu0/u_rf/rstn              |               23 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_9[0]                                                       | mycpu0/u_rf/rstn              |               23 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_nop_detect/E[0]                                                                      | mycpu0/u_rf/rstn              |                9 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/E[0]                                                                      | mycpu0/u_rf/rstn              |               18 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_exe_mem/E[0]                                                                     | mycpu0/u_rf/rstn              |               16 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_0[0]                                                       | mycpu0/u_rf/rstn              |               29 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_16[0]                                                      | mycpu0/u_rf/rstn              |               20 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_18[0]                                                      | mycpu0/u_rf/rstn              |               17 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_19[0]                                                      | mycpu0/u_rf/rstn              |               11 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_2[0]                                                       | mycpu0/u_rf/rstn              |               23 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_20[0]                                                      | mycpu0/u_rf/rstn              |               17 |             32 |
 |  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_17[0]                                                      | mycpu0/u_rf/rstn              |               17 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_6[0]                                                       | mycpu0/u_rf/rstn              |               24 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_12[0]                                                      | mycpu0/u_rf/rstn              |               12 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_15[0]                                                      | mycpu0/u_rf/rstn              |               16 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_21[0]                                                      | mycpu0/u_rf/rstn              |               16 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_26[0]                                                      | mycpu0/u_rf/rstn              |               21 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_10[0]                                                      | mycpu0/u_rf/rstn              |               22 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_25[0]                                                      | mycpu0/u_rf/rstn              |               19 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_5[0]                                                       | mycpu0/u_rf/rstn              |               28 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_7[0]                                                       | mycpu0/u_rf/rstn              |               26 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_8[0]                                                       | mycpu0/u_rf/rstn              |               14 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_9[0]                                                       | mycpu0/u_rf/rstn              |               12 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_0[0]                                                       | mycpu0/u_rf/rstn              |               14 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_27[0]                                                      | mycpu0/u_rf/rstn              |               17 |             32 |
-|  clk_IBUF_BUFG | mycpu0/u_reg_exe_mem/E[0]                                                                     | mycpu0/u_rf/rstn              |               11 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_21[0]                                                      | mycpu0/u_rf/rstn              |               24 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_22[0]                                                      | mycpu0/u_rf/rstn              |               26 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_23[0]                                                      | mycpu0/u_rf/rstn              |               29 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_24[0]                                                      | mycpu0/u_rf/rstn              |               24 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_25[0]                                                      | mycpu0/u_rf/rstn              |               22 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_10[0]                                                      | mycpu0/u_rf/rstn              |               19 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_11[0]                                                      | mycpu0/u_rf/rstn              |               16 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_12[0]                                                      | mycpu0/u_rf/rstn              |               19 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_13[0]                                                      | mycpu0/u_rf/rstn              |               15 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_1[0]                                                       | mycpu0/u_rf/rstn              |               18 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_15[0]                                                      | mycpu0/u_rf/rstn              |               20 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_14[0]                                                      | mycpu0/u_rf/rstn              |               18 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_6[0]                                                       | mycpu0/u_rf/rstn              |               16 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_3[0]                                                       | mycpu0/u_rf/rstn              |               15 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_5[0]                                                       | mycpu0/u_rf/rstn              |               18 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_29[0]                                                      | mycpu0/u_rf/rstn              |               15 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_4[0]                                                       | mycpu0/u_rf/rstn              |               19 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_26[0]                                                      | mycpu0/u_rf/rstn              |               26 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_7[0]                                                       | mycpu0/u_rf/rstn              |               20 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_28[0]                                                      | mycpu0/u_rf/rstn              |               15 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_27[0]                                                      | mycpu0/u_rf/rstn              |               19 |             32 |
+|  clk_IBUF_BUFG | mycpu0/u_reg_mem_wb/reg_we_tmp_reg_8[0]                                                       | mycpu0/u_rf/rstn              |               15 |             32 |
 |  clk_IBUF_BUFG | mycpu0/u_nop_detect/pc_tmp                                                                    | mycpu0/u_rf/rstn              |               20 |             76 |
 |  clk_IBUF_BUFG | data_ram_4k/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_255_0_0_i_1_n_0    |                               |               32 |            128 |
 |  clk_IBUF_BUFG | data_ram_4k/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_256_511_0_0_i_1_n_0  |                               |               32 |            128 |
 |  clk_IBUF_BUFG | data_ram_4k/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_512_767_0_0_i_1_n_0  |                               |               32 |            128 |
 |  clk_IBUF_BUFG | data_ram_4k/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_768_1023_0_0_i_1_n_0 |                               |               32 |            128 |
-|  clk_IBUF_BUFG |                                                                                               | mycpu0/u_rf/rstn              |              158 |            433 |
+|  clk_IBUF_BUFG |                                                                                               | mycpu0/u_rf/rstn              |              175 |            433 |
 +----------------+-----------------------------------------------------------------------------------------------+-------------------------------+------------------+----------------+
 
 
